@@ -1,18 +1,17 @@
 {
   "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple react boilerplate",
   "main": "index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
     "clean": "rm dist/bundle.js",
-    "start": "parcel src/index.html",
-    "build-prod": "parcel build src/index.html"
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production ./src/index.html"
   },
   "dependencies": {
-    "@types/react-redux": "^7.1.1",
     "axios": "^0.19.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -28,8 +27,15 @@
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
-    "parcel-bundler": "^1.12.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.18.2",
-    "typescript": "^3.5.3"
+    "style-loader": "^0.23.1",
+    "typescript": "^3.5.3",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   }
 }

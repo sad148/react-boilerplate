@@ -1,13 +1,13 @@
 const axios = require('axios');
 
-function searchUsers(name: string) {
+function searchUsers(name) {
     return (dispatch) => {
     axios.get("https://api.github.com/search/users?q=" + name)
-    .then((response: JSON) => {
+    .then((response) => {
         dispatch({type: "FETCHED_USERS", payload: response});
         console.log(response)
     })
-    .catch((err: any) => {
+    .catch((err) => {
         console.log(err);
     })
 }
