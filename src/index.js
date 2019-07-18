@@ -15,6 +15,17 @@ const logger = createLogger({});
 const store = createStore(searchUsers, {}, applyMiddleware(logger, thunk, promise))
 
 var mountNode = document.getElementById("app");
+
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then((reg) => {
+      console.log("Service worker is registered")
+    })
+    .catch((error) => {
+      console.log("Service worker not registered", error);
+    })
+}
+
 ReactDOM.render(
   <Provider store={store}>
     <AppRouter/>

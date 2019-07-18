@@ -1,5 +1,4 @@
-const searchUsers = (state = {users : [1, 2,3], fetchingUser : false}, action) => {
-    console.log("inside searchusers");
+const searchUsers = (state = {users : [], fetchingUser : false}, action) => {
     switch(action.type) {
         case 'FETCHED_USERS':
             state ={
