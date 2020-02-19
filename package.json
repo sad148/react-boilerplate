@@ -4,7 +4,7 @@
   "description": "A simple react boilerplate",
   "main": "index.js",
   "keywords": [],
-  "author": "",
+  "author": "Saurabh Dhamnaskar",
   "license": "ISC",
   "scripts": {
     "clean": "rm dist/bundle.js",
